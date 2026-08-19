@@ -28,27 +28,22 @@ export default function ProjectCard({
     >
       {/* Project Image */}
       <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-neutral-900">
-        {project.image &&
-        project.image !== "/projects/placeholder.png" ? (
+        {project.image ? (
           <Image
             src={project.image}
-            alt={`${project.title} project screenshot`}
+            alt={`${project.title} project preview`}
             fill
             className="object-cover transition-transform duration-500 hover:scale-[1.02]"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-800">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)] bg-[size:32px_32px] opacity-25" />
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-16 w-16 rounded-2xl border border-white/10 bg-neutral-800" />
-            </div>
+          <div className="flex h-full items-center justify-center text-neutral-500">
+            Project image coming soon
           </div>
         )}
       </div>
 
-      {/* Project Information */}
+      {/* Project Details */}
       <div>
         <div className="mb-3 flex flex-wrap items-center gap-3">
           <span className="text-sm text-neutral-500">
@@ -90,24 +85,20 @@ export default function ProjectCard({
         </div>
 
         <div className="mt-8 flex gap-5">
-          {project.github !== "#" && (
-            <Link
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 transition-colors hover:text-neutral-300"
-            >
-              <Code2 size={18} />
-              GitHub
-            </Link>
-          )}
+          <Link
+            href={project.github}
+            target="_blank"
+            className="inline-flex items-center gap-2"
+          >
+            <Code2 size={18} />
+            GitHub
+          </Link>
 
           {project.live && (
             <Link
               href={project.live}
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 transition-colors hover:text-neutral-300"
+              className="inline-flex items-center gap-2"
             >
               Live Demo
               <ArrowUpRight size={18} />

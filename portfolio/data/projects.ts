@@ -61,7 +61,7 @@ export const projects: Project[] = [
 
     year: "2026",
 
-    image: "/projects/capstone.jpeg",
+    image: "/projects/capstone-placeholder.png",
 
     featured: true,
 
@@ -71,39 +71,36 @@ export const projects: Project[] = [
   },
 
   {
-    title: "AI-Powered Windows System Diagnostics Platform",
+  title: "Dynamic Content Streaming Pipeline",
 
-    description:
-      "Local AI diagnostic platform that continuously monitors Windows system health and provides explainable troubleshooting using RAG.",
+  description:
+    "A distributed real-time streaming system built with Apache Kafka, featuring admin-controlled topic lifecycle governance and persistent metadata management.",
 
-    techStack: [
-      "Python",
-      "SQLite",
-      "ChromaDB",
-      "Ollama",
-      "Plotly",
-      "psutil",
-    ],
+  techStack: [
+    "Apache Kafka",
+    "Python",
+    "Flask",
+    "SQLite",
+  ],
 
-    highlights: [
-      "Continuous monitoring of CPU, memory, disk and security metrics.",
-      "Historical trend analysis and bottleneck detection.",
-      "Evidence-backed diagnostic assistant using local LLMs.",
-    ],
+  highlights: [
+    "Built a distributed producer-consumer architecture for real-time content streaming.",
+    "Implemented admin-driven topic creation, configuration and lifecycle management.",
+    "Developed a Flask-based control plane with persistent metadata storage for topic governance.",
+  ],
 
-    github: "#",
+  github: "#",
 
-    year: "2026",
+  year: "2025",
 
-    image: "/projects/diagnostics.png",
+  image: "/projects/kafka-placeholder.png",
 
-    featured: true,
+  featured: true,
 
-    status: "Completed",
+  status: "Completed",
 
-    category: "Systems",
-  },
-
+  category: "Distributed Systems",
+},
   {
     title: "Placement Mail Tracker",
 
@@ -170,35 +167,5 @@ export const projects: Project[] = [
     category: "Data Science",
   },
 
-  {
-    title: "Dynamic Content Streaming Pipeline",
-
-    description:
-      "Distributed Kafka-based streaming platform with admin-controlled topic governance and real-time messaging.",
-
-    techStack: [
-      "Apache Kafka",
-      "Python",
-      "Flask",
-      "SQLite",
-    ],
-
-    highlights: [
-      "Distributed producer-consumer architecture.",
-      "Persistent metadata storage.",
-      "Administrative topic lifecycle management.",
-    ],
-
-    github: "#",
-
-    year: "2025",
-
-    image: "/projects/placeholder.png",
-
-    featured: false,
-
-    status: "Completed",
-
-    category: "Distributed Systems",
-  },
+  
 ];

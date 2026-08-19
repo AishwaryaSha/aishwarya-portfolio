@@ -8,13 +8,15 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "github-readme-stats.vercel.app",
-      },
-    ],
-  },
+  unoptimized: true,
+
+  remotePatterns: [
+    {
+      protocol: "https",
+      hostname: "github-readme-stats.vercel.app",
+    },
+  ],
+},
 };
 
 export default nextConfig;
